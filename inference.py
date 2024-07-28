@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description='Run Yolov8 inference on a video')
 parser.add_argument('--conf', type=float, default=0.25, help='confidence threshold')
 parser.add_argument('--iou', type=float, default=0.7, help='Iou threshold for NMS')
 parser.add_argument('--max_det', type=int, default=300, help='Number of detection')
-parser.add_argument('--augment', type=bool,default=False, help='improves model prediction robustness with the cost of inference speed')
+parser.add_argument('--augment', type=bool,default=True, help='improves model prediction robustness with the cost of inference speed')
 parser.add_argument('--vid_stride', type=int, default=1, help='skips the video frames 1 means infernce on everyframe')
 parser.add_argument('--agnostic_nms', type=bool, default=False, help='skips the video frames 1 means infernce on everyframe')
 
@@ -16,9 +16,9 @@ parser.add_argument('--agnostic_nms', type=bool, default=False, help='skips the 
 
 args = parser.parse_args()
 
-model = YOLO('Crime_best.pt')
+model = YOLO('datasets\Crime_best.pt')
 # @title Default title text
-Cap_obj=cv2.VideoCapture("Y2meta.app-TOP 10 ROBBERY FAILS!-(1080p).mp4")
+Cap_obj=cv2.VideoCapture("Clerk bombarded by 4 gunmen during robbery at SW Houston gas station.mp4")
 print("check==",Cap_obj.isOpened())
 
 fps = int(Cap_obj.get(cv2.CAP_PROP_FPS))

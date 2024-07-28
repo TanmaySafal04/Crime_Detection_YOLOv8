@@ -2,10 +2,10 @@ import cv2
 from ultralytics import YOLO
 import numpy as np
 # Path to the output video file
-model = YOLO('Crime_best.pt')
+model = YOLO('datasets\Crime_best.pt')
 output_path = 'anotated_video/crime_video.mp4'
 
-video_path = 'Y2meta.app-TOP 10 ROBBERY FAILS!-(1080p).mp4'
+video_path = 'Clerk bombarded by 4 gunmen during robbery at SW Houston gas station.mp4'
 # Open the input video file
 cap = cv2.VideoCapture(video_path)
 
