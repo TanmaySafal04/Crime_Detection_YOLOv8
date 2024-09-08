@@ -3,7 +3,7 @@ from ultralytics import YOLO
 import numpy as np
 
 # Load your custom-trained YOLO model
-model = YOLO('best.pt')
+model = YOLO('datasets\Crime_best.pt')
 
 # Open a connection to the webcam
 cap = cv2.VideoCapture(0)
